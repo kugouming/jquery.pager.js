@@ -14,7 +14,8 @@
         prevText: "上一页",
         nextText: "下一页",
         buildPageUrl: null,
-        onPageChanged: null
+        onPageChanged: null,
+        callback :function(){}
     };
 
     function Pager($ele, options) {
@@ -78,6 +79,9 @@
             }
 
             this.$ele.html(html.join(""));
+            if(typeof(options.callback)=="function"){
+                options.callback(this.getPageIndex());
+            }
         },
         bindEvent: function () {
             var that = this;
