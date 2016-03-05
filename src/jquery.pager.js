@@ -6,7 +6,7 @@
  */
 ; (function ($, window, document, undefined) {
     "use strict";
-    var defaults = {
+    var defaults = {ssss
         pageIndex: 0,
         pageSize: 6,
         itemCount: 50,
